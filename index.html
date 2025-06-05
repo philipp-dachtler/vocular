@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Vokabeltrainer</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="theme-color" content="#007AFF">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Hauptbereich mit Tabs -->
+        <div class="tab-content" id="learn-tab">
+            <div class="card" id="flashcard">
+                <div class="card-front">Klicke zum Starten</div>
+                <div class="card-back" style="display:none;"></div>
+            </div>
+            <div class="card-actions">
+                <button id="wrong-btn">Falsch</button>
+                <button id="correct-btn">Richtig</button>
+            </div>
+        </div>
+
+        <div class="tab-content" id="setup-tab" style="display:none;">
+            <h2>Vokabeln hinzufügen</h2>
+            <div class="input-group">
+                <input type="text" id="german-input" placeholder="Deutsch">
+                <input type="text" id="english-input" placeholder="Englisch">
+                <button id="add-btn">Hinzufügen</button>
+            </div>
+            <ul id="vocab-list"></ul>
+        </div>
+
+        <div class="tab-content" id="stats-tab" style="display:none;">
+            <h2>Statistiken</h2>
+            <div class="stats">
+                <div>Gelernt: <span id="correct-count">0</span></div>
+                <div>Falsch: <span id="wrong-count">0</span></div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <button class="nav-btn active" data-tab="learn-tab">Lernen</button>
+            <button class="nav-btn" data-tab="setup-tab">Vokabeln</button>
+            <button class="nav-btn" data-tab="stats-tab">Statistiken</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

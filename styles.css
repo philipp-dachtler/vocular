@@ -1,0 +1,123 @@
+:root {
+    --primary-color: #007AFF;
+    --correct-color: #34C759;
+    --wrong-color: #FF3B30;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.tab-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 40px 20px;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    cursor: pointer;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+}
+
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.card-actions button {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+#wrong-btn {
+    background-color: var(--wrong-color);
+}
+
+#correct-btn {
+    background-color: var(--correct-color);
+}
+
+.bottom-nav {
+    display: flex;
+    border-top: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.nav-btn {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.nav-btn.active {
+    color: var(--primary-color);
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#add-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0 15px;
+}
+
+#vocab-list {
+    list-style: none;
+    padding: 0;
+}
+
+#vocab-list li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
